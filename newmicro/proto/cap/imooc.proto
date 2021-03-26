@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package go.micro.service.imooc;
+// option go_package = "hs";
+
+service Cap {
+  rpc SayHello(SayReq) returns (SayResp) {};
+}
+
+message SayReq {
+  string message = 1;
+}
+
+message SayResp {
+  string answer = 1;
+}
